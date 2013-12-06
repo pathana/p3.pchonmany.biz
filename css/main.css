@@ -1,0 +1,26 @@
+/*CSS Document*/
+
+body {
+	background-color: aqua;
+}
+
+canvas {
+	background-color: white;
+	border: 2px solid #CCC;
+	border-radius: 7px;
+	box-shadow: 1px 1px 10px #888888;
+}
+
+#content {
+	border: 1px solid #666;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	padding: 15px;
+	padding-bottom: 20px;
+}
+
+#tools {
+	
+}
