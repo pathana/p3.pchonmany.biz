@@ -35,8 +35,8 @@ var __slice = Array.prototype.slice;
       this.options = $.extend({
         toolLinks: true,
         defaultTool: 'marker',
-        defaultColor: '#000000',
-        defaultSize: 5
+        defaultColor: '#000085',
+        defaultSize: 7
       }, opts);
       this.painting = false;
       this.color = this.options.defaultColor;

@@ -12,16 +12,34 @@
 
 <body>
 	<div id="content">
-		<canvas id="simple_sketch" width="700" height="400"></canvas>
+		<canvas id="colors_sketch" width="700" height="400"></canvas>
 
 		<script type="text/javascript">
 			$(function() {
-		    	$('#simple_sketch').sketch();
+		    	$.each(['#f00', '#FFF', '#B00', '#FF8400', '#F6FF00', '#09AB00', '#000085', '#6E008C', '#E815CC'], function() {
+		    		$('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
+		    	});
+		    	$.each([3, 5, 10, 15, 24], function() {
+		    		$('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #CCC'>" + this + "</a> ");
+		    	});
+		    $('#colors_sketch').sketch();
+			});
+
+			$("canvas").on("mousedown", function (e) {
+				e.preventDefault();
+    		$(this).addClass("mouseDown");
+			}).on("mouseup", function () {
+				$(this).removeClass("mouseDown");
 			});
 		</script>
-	<p>
-		<div id="tools">
 
+	<p>
+		<div class="tools">
+			<a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>
+			<a href="#colors_sketch" data-tool="marker"><img src="images/brush.png"></a>
+			<a href="#colors_sketch" data-tool="eraser"><img src="images/eraser.png"></a>
+			<a href="#colors_sketch" data-color="#f00" style="width: 10px; background: #f00;"></a>
+			<a href="#colors_sketch" data-color="#B00" style="width: 10px; background: #B00;"></a>
 		</div>
 
 	</div>
