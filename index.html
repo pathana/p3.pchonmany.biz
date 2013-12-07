@@ -3,6 +3,7 @@
 <head>
 	<title>P3 - Connect the Dots</title>
 	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -12,21 +13,25 @@
 <body>
 <h1>Connect the Dots!</h1><p>
 	<div id="content">
-	Welcome to a quick game of connect the dots with Thomas the Tank Engine. After you are finished connecting to number 30, feel free to wonder about and fill in some more of the picture (hint: it's really a free-for-all drawing canvas). You have a blue paintbrush to work with and incase you mess up, there is an eraser handy. When you're happy with what you see, you can click on the Download button to get a PNG of your creation. Enjoy!
+		Welcome to a quick game of connect the dots with Thomas the Tank Engine. After you are finished connecting to number 30, feel free to wonder about and fill in some more of the picture (hint: it's really a free-for-all drawing canvas). You have a blue paintbrush to work with and incase you mess up, there is an eraser handy. When you're happy with what you see, you can click on the Download button to get a PNG of your creation. Enjoy!
 	<p><br>
 		<canvas id="colors_sketch" width="700" height="700" style="background: url(images/dots.jpg) no-repeat center center;"></canvas>
 
 		<script type="text/javascript">
 			$(function() {
+				//Array of colors to use on the canvas
 		    	$.each(['#f00', '#FFF', '#B00', '#FF8400', '#F6FF00', '#09AB00', '#000085', '#6E008C', '#E815CC'], function() {
+		    	//When color is clicked, color used on canvas will change to that color
 		    		$('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
 		    	});
+		    	//When size is clicked, size of brush used on canvas will change to that size
 		    	$.each([3, 5, 10, 15, 24], function() {
 		    		$('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #CCC'>" + this + "</a> ");
 		    	});
-		    $('#colors_sketch').sketch();
+		    $('#colors_sketch').sketch(); //Allows the user to draw on the canvas
 			});
 
+			//Cursor changes while mouse down hovering in the canvas and then changes back when mouse up
 			$("canvas").on("mousedown", function (e) {
 				e.preventDefault();
     		$(this).addClass("mouseDown");
@@ -34,14 +39,13 @@
 				$(this).removeClass("mouseDown");
 			});
 		</script>
-
 	<p>
 		<div class="tools">
 			<a href="#colors_sketch" data-download="png" style="float: right; width: 185px;"><img src="images/download.png" alt="Download"></a>
 			<a href="#colors_sketch" data-tool="marker"><img src="images/brush.png" alt="Brush"></a>
 			<a href="#colors_sketch" data-tool="eraser"><img src="images/eraser.png" alt="Eraser"></a>
-			<a href="#colors_sketch" data-color="#f00" style="width: 10px; background: #f00;"></a>
-			<a href="#colors_sketch" data-color="#B00" style="width: 10px; background: #B00;"></a>
+			<!--<a href="#colors_sketch" data-color="#f00" style="width: 10px; background: #f00;"></a>
+			<a href="#colors_sketch" data-color="#B00" style="width: 10px; background: #B00;"></a>-->
 		</div>
 
 	</div>
