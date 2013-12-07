@@ -1,7 +1,22 @@
 /*CSS Document*/
 
 body {
-	background-color: aqua;
+	background-color: #FFF;
+	background: url(cream_pixels.png);
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #802900;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+h1 {
+	color: #659C3D;
+	font-size: 2.1em;
+	text-align: center;
+	font-weight: bold;
+	margin: 50px;
+	padding-bottom: 5px;
 }
 
 canvas {
@@ -16,7 +31,6 @@ canvas.mouseDown {
 }
 
 #content {
-	border: 1px solid #666;
 	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,4 +41,9 @@ canvas.mouseDown {
 
 #tools {
 
+}
+
+img {
+	margin: 10px;
+	margin-right: 35px;
 }

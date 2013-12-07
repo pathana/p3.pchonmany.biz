@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>P3 - Drawing Book</title>
+	<title>P3 - Connect the Dots</title>
 	
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -9,10 +9,12 @@
 	<script src="js/sketch.js"></script>
 </head>
 
-
 <body>
+<h1>Connect the Dots!</h1><p>
 	<div id="content">
-		<canvas id="colors_sketch" width="700" height="400"></canvas>
+	Welcome to a quick game of connect the dots with Thomas the Tank Engine. After you are finished connecting to number 30, feel free to wonder about and fill in some more of the picture (hint: it's really a free-for-all drawing canvas). You have a blue paintbrush to work with and incase you mess up, there is an eraser handy. When you're happy with what you see, you can click on the Download button to get a PNG of your creation. Enjoy!
+	<p><br>
+		<canvas id="colors_sketch" width="700" height="700" style="background: url(images/dots.jpg) no-repeat center center;"></canvas>
 
 		<script type="text/javascript">
 			$(function() {
@@ -35,9 +37,9 @@
 
 	<p>
 		<div class="tools">
-			<a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>
-			<a href="#colors_sketch" data-tool="marker"><img src="images/brush.png"></a>
-			<a href="#colors_sketch" data-tool="eraser"><img src="images/eraser.png"></a>
+			<a href="#colors_sketch" data-download="png" style="float: right; width: 185px;"><img src="images/download.png" alt="Download"></a>
+			<a href="#colors_sketch" data-tool="marker"><img src="images/brush.png" alt="Brush"></a>
+			<a href="#colors_sketch" data-tool="eraser"><img src="images/eraser.png" alt="Eraser"></a>
 			<a href="#colors_sketch" data-color="#f00" style="width: 10px; background: #f00;"></a>
 			<a href="#colors_sketch" data-color="#B00" style="width: 10px; background: #B00;"></a>
 		</div>
